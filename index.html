@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAHKINI | Colección de Lujo Swimwear</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="main-header fixed-header">
+        <a href="#" class="logo">SAHKINI</a>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#" class="active">Inicio</a></li> 
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><button id="cart-button" class="cart-btn">🛒 (0)</button></li> 
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero full-height-section" id="inicio">
+        <div class="hero-content">
+            <h1 class="luxury-title">Elegancia Definida. Verano Sin Límites.</h1>
+            <a href="#productos" class="cta-button luxury-cta">Explorar Colección</a>
+        </div>
+    </section>
+
+    <section id="productos" class="product-grid-section">
+        <h2 class="section-title">La Selección de la Temporada</h2>
+
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="img/terrabikini.png" alt="Terra Bikini"
+                data-original-src="img/terrabikini.png" 
+                data-hover-src="img/terrabikini2.png">
+                <div class="card-info">
+                    <p class="product-name">Terra Bikini</p>
+                    <p class="price">$70.000</p>
+                    <button class="add-to-cart" data-id="1" data-name="Terra Bikini" data-price="70.000">Añadir</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="img/Noir Bikini.webp" alt="Traje de Baño Clásico"
+                data-original-src="img/Noir Bikini.webp" 
+                data-hover-src="img/noirbikini.png">
+                <div class="card-info">
+                    <p class="product-name">Noir Bikini</p>
+                    <p class="price">$70.000</p>
+                    <button class="add-to-cart" data-id="2" data-name="Traje de Baño Aura" data-price="70.000">Añadir</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="img/Wild Pink Bikini.webp" alt="Traje de Baño Clásico"
+                data-original-src="img/Wild Pink Bikini.webp" 
+                data-hover-src="img/Wild Pink Bikini2.webp">
+                <div class="card-info">
+                    <p class="product-name">Wild Pink Bikini</p>
+                    <p class="price">$70.000</p>
+                    <button class="add-to-cart" data-id="3" data-name="Traje de Baño Aura" data-price="70.000">Añadir</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="img/Wild Nude Bikini.png" alt="Traje de Baño Clásico"
+                data-original-src="img/Wild Nude Bikini.png" 
+                data-hover-src="img/wild nude bikini2.webp">
+                <div class="card-info">
+                    <p class="product-name">Wild Nude Bikini</p>
+                    <p class="price">$70.000</p>
+                    <button class="add-to-cart" data-id="4" data-name="Traje de Baño Aura" data-price="70.000">Añadir</button>
+                </div>
+            </div>
+
+            </div>
+    </section>
+
+    <section id="contacto" class="contact-section">
+        <h2 class="section-title">Hablemos de Estilo</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Tu Nombre Completo" required>
+            <input type="email" placeholder="Correo Electrónico" required>
+            <textarea placeholder="Tu consulta..." rows="5" required></textarea>
+            <button type="submit" class="cta-button luxury-cta">Enviar</button>
+        </form>
+    </section>
+
+    <footer class="main-footer">
+        <div class="footer-columns">
+            <div class="col-info">
+                <h3>SAHKINI</h3>
+                <p class="copyright">&copy; 2025 SAHKINI. Todos los derechos reservados.</p>
+            </div>
+            <div class="col-links">
+                <h4>Ayuda</h4>
+                <ul>
+                    <li><a href="#">Guía de Tallas</a></li>
+                    <li><a href="#">Envíos y Devoluciones</a></li>
+                    <li><a href="#">Preguntas Frecuentes</a></li>
+                </ul>
+            </div>
+            <div class="col-links">
+                <h4>Compañía</h4>
+                <ul>
+                    <li><a href="#">Nuestra Historia</a></li>
+                    <li><a href="#">Política de Privacidad</a></li>
+                    <li><a href="#">Términos de Servicio</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <div id="cart-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h3 class="modal-title">🛒 Tu Carrito de Compras</h3>
+        
+        <div id="cart-items">
+            <p class="empty-message">Tu carrito está vacío.</p>
+        </div>
+        
+        <div class="cart-summary">
+            <p>Total: <span id="cart-total">$0.00</span></p>
+        </div>
+        
+        <button class="checkout-btn luxury-cta">Finalizar Compra</button>
+    </div>
+</div>
+
+<div id="product-detail-modal" class="modal">
+    <div class="modal-content product-detail-content">
+        <span class="close-btn detail-close-btn">&times;</span>
+        
+        <div id="product-detail-container" class="detail-grid">
+            </div>
+    </div>
+</div>
+</body>
+</html>
